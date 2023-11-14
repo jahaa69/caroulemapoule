@@ -1,5 +1,5 @@
 <?php 
-    require_once 'connect.php';
+    require_once 'app/database/connect.php';
 
     function getuser(){
         //recuperer les données de la bdd et les afficher
@@ -8,7 +8,7 @@
         $result = $connectBdd->query($sql);
         if ($result->rowCount() > 0) {
             while ($row = $result->fetch()) {
-                echo $row["nom"] . " " .$row["prenom"] . "<br>";
+                echo $row["name"] . " " .$row["lastname"] . "<br>";
             }
         } else {
             echo "0 results";

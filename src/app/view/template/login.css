@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 99.96%;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 10%;
+    border: 1px solid black;
+}
+.input{
+    width: 99%;
+    justify-content: center;
+}
