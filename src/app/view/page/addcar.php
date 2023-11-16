@@ -14,7 +14,7 @@
         <input type="text" id="inputville" placeholder="ville">
         <input type="submit" value="Submit">
         <?php 
-            require_once '../addcarbdd.php';
+            require_once '../../addcarbdd.php';
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     $marque = $_POST["inputmarque"];
                     $couleur = $_POST["inputcouleur"];
