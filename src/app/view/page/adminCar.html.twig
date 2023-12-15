@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../css/admin.css"/>
+		<title>{{titlePage}}</title>
+	</head>
+	<body>
+		<div class="car_data" id="carDataOption">
+			<h1 class="titreOPTION">car data</h1>
+			<form action="/adminCar" method="post">
+				<select id="inputBrand" name="inputBrand">
+					<option value="" selected disabled hidden>Marque</option>
+					{% for brandItem in brandT %}
+						<option value="{{ brandItem.id }}">{{ brandItem.name }}</option>
+					{% endfor %}
+				</select>
+
+				<select id="inputcolor" name="inputcolor">
+					<option value="" selected disabled hidden>Color</option>
+					{% for colorItem in colorT %}
+						<option value="{{ colorItem.id }}">{{ colorItem.name }}</option>
+					{% endfor %}
+
+				</select>
+
+				<input type="text" id="inputPrice" placeholder="prix" name="inputPrice">
+
+				<select id="inputplace" name="inputplace">
+					<option value="" selected disabled hidden>nombre de place</option>
+					{% for placeItem in placeT %}
+						<option value="{{ placeItem.id }}">{{ placeItem.name }}</option>
+					{% endfor %}
+				</select>
+
+				<select id="inputTown" name="inputTown">
+					<option value="" selected disabled hidden>ville</option>
+					{% for villeItem in townT %}
+						<option value="{{ villeItem.id }}">{{ villeItem.name }}</option>
+					{% endfor %}
+				</select>
+				<input type="text" id="inputImage" placeholder="image" name="inputImage">
+				<button type="submit" class="btn">ajout voiture</button>
+			</form>
+		</div>
+		<table class="tableau" method="POST">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>marque</th>
+					<th>color</th>
+					<th>prix</th>
+					<th>place</th>
+					<th>ville</th>
+					<th>image</th>
+					<th>supprimer</th>
+					<th>modifier</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for carItem in CarT %}
+					<tr v-for="car in cars">
+						<td>{{ carItem.id }}</td>
+						<td>{{ carItem.brand}}</td>
+						<td>{{ carItem.color }}</td>
+						<td>{{ carItem.price }}</td>
+						<td>{{ carItem.place }}</td>
+						<td>{{ carItem.town }}</td>
+						<td><img src="{{carItem.image}}" ></img></td>
+						<td>
+							<a href="/adminDeleteCar/{{ carItem.id }}">supprimer</a>
+						</td>
+						<td>
+							<a href="/adminUpdateCar/{{ carItem.id }}">modifier</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</body>
+	</body>
+</html>

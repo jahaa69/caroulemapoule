@@ -1,0 +1,30 @@
+
+<html>
+<head>
+    <title>{{titleSite}}</title>
+    <link rel="stylesheet" href="../css/carlist.css">
+</head>
+<body>
+    <h1>{{titlePage}}</h1>
+    <table>
+        <tr>
+            <th>image</th>
+            <th>Marque</th>
+            <th>Modele</th>
+            <th>Année</th>
+            <th>Couleur</th>
+            <th>Ville</th>
+        </tr>
+        {% for carItem in carList %}
+            <tr>
+                <td class="image"><img src="{{carItem.image}}" alt="{{carItem.brand}}"></td>
+                <td>{{carItem.brand}}</td>
+                <td>{{carItem.price}}</td>
+                <td>{{carItem.place}} place</td>
+                <td>{{carItem.color}}</td>
+                <td>{{carItem.town}}</td>
+            </tr>
+        {% endfor %}
+
+</body>
+</html>

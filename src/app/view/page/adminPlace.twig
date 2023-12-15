@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin Place</title>
+        <link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>{{titlePage}}</h1>
+			<form method="post">
+				<label for="name">Nombre de place</label>
+				<input type="text" name="inputPlace" id="name" value="{{place.name}}">
+				<button type="submit" class="btn">ajout place</button>
+		    </div>
+			<table class="tableau">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>nombre de place</th>
+						<th>supprimer</th>
+						<th>modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for placeItem in placeT %}
+						<tr v-for="car in cars">
+							<td>{{ placeItem.id }}</td>
+							<td>{{ placeItem.name }} place</td>
+							<td>
+								<a href="/adminDeletePlace/{{ placeItem.id }}">supprimer</a>
+							</td>
+							<td>
+								<a href="/adminUpdatePlace/{{ placeItem.id }}">modifier</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

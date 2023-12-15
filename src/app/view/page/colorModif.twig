@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Admin Color</title>
+        <link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+		<div class="header">
+			<h1>{{titlePage}}</h1>
+			<form method="post">
+				<label for="name">Nombre de color</label>
+				<input type="text" name="inputColor" id="name" value="{{color.name}}">
+				<button type="submit" class="btn">ajout couleur</button>
+		    </div>
+			<table class="tableau">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>Couleur</th>
+						<th>supprimer</th>
+						<th>modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for colorItem in colorT %}
+						<tr v-for="car in cars">
+							<td>{{ colorItem.id }}</td>
+							<td>{{ colorItem.name }}</td>
+							<td>
+								<a href="/adminDeleteColor/{{ colorItem.id }}">supprimer</a>
+							</td>
+							<td>
+								<a href="/adminUpdateColor/{{ colorItem.id }}">modifier</a>
+							</td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

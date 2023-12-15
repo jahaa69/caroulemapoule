@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>{{titleSite}}</title>
+		<link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+    <div class="header">
+		<h1>{{titlePage}}</h1>
+		<form method="post">
+                <label for="name">Nom de la marque</label>
+                <input type="text" name="inputBrand" id="name" value="{{brand.name}}" >
+                <button type="submit" class="btn">ajout marque</button>
+        </div>
+			<table class="tableau">
+			<thead>
+				<tr>
+					<th>id</th>
+					<th>color</th>
+					<th>supprimer</th>
+					<th>modifier</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for brandItem in brandT %}
+					<tr v-for="car in cars">
+						<td>{{ brandItem.id }}</td>
+						<td>{{ brandItem.name }}</td>
+						<td>
+							<a href="/adminDeleteBrand/{{ brandItem.id }}">supprimer</a>
+						</td>
+						<td>
+							<a href="/adminUpdateBrand/{{ brandItem.id }}">modifier</a>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+            </table>
+        </form>
+    </body>
+</html>

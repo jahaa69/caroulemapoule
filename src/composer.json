@@ -1,0 +1,15 @@
+{
+    "require": {
+      "twig/twig": "^3.0",
+      "fakerphp/faker": "^1.23"
+    },
+    "autoload": {
+      "psr-4": {
+        "App\\": "app/",
+        "Model\\": "app/Model/",
+        "Controller\\": "app/Controller/",
+        "Database\\": "app/Database/"
+        
+      }
+    }
+  }

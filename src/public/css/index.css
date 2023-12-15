@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page{
+    width: 100vw;
+    height: 150vh;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.caseLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 100%;
+}
+.caseLogin a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(8, 159, 219);
+    border-radius: 5px;
+    width: 50%;
+    height: 30%;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+    justify-content: space-around;
+}
+.case{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 50%;
+    border: 1px solid black;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+img{
+    display: flex;
+    width: 20%;
+    height: 60%;
+}
+.titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.prix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+}
+.casetwolink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10%;
+}
+.resume{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.order{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+}
+
+.casetwolink a{
+    display: flex;
+    text-decoration: none;
+    background-color: rgb(0, 183, 255);
+    border-radius: 5px;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 30%;
+    justify-content: center;
+}
+.userPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+
+
+}
+.caseprofil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.caseLogout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 50%;
+}
+.caseLogout a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(8, 159, 219);
+    border-radius: 5px;
+    width: 50%;
+    height: 10%;
+}
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.infouser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+}
+.footer{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(0, 183, 255);
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

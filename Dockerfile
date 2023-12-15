@@ -12,7 +12,7 @@ RUN pecl install xdebug \
     && a2enmod rewrite \
     && docker-php-ext-install zip \
     && service apache2 restart
-
+RUN docker-php-ext-install pdo pdo_mysql
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf

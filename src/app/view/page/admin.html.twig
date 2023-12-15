@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" href="../css/admin.css"/>
+		<title>{{titlePage}}</title>
+	</head>
+	<body>
+
+		<div class="page">
+
+			<div class="container">
+				<div class="menu" id="menu">
+					<div class="header">
+						<h1 class="titre">{{title}}</h1>
+						<form action="/loginA" method="POST">
+							<label for="email">Email:</label>
+							<input type="email" id="emailAdmin" name="emailAdmin" required>
+							<label for="password">Password:</label>
+							<input type="password" id="passwordAdmin" name="passwordAdmin" required>
+							<button type="submit">Login</button>
+						</form>
+					</div>
+				</div>
+				<script src="../js/admin.js"></script>
+			</body>
+		</html>
+	</body>
+</html>

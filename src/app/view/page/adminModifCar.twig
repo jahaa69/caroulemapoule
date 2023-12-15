@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{titleSite}}</title>
+		<link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+		<h1>{{titlePage}}</h1>
+		<form method="post">
+			<table class="tableau">
+				<thead>
+					<tr>
+						<th>{{oneCar.id}}</th>
+						<th>{{oneCar.color}}</th>
+						<th>{{oneCar.brand}}</th>
+						<th>{{oneCar.place}}</th>
+						<th>{{oneCar.town}}</th>
+						<th>{{oneCar.price}}</th>
+                        <th><img src="{{oneCar.image}}"></img></th>
+						<th>modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					<th>{{oneCar.id}}</th>
+					<th>
+						<select id="inputcolor" name="inputcolor" required>
+							<option value="" selected disabled hidden>Color</option>
+							{% for colorItem in colorT %}
+								<option value="{{ colorItem.id }}">{{ colorItem.name }}</option>
+							{% endfor %}
+						</select>
+					</th>
+                    <th>
+                        <select id="inputBrand" name="inputBrand" required>
+                            <option value="" selected disabled hidden>Marque</option>
+                            {% for brandItem in brandT %}
+                                <option value="{{ brandItem.id }}">{{ brandItem.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </th>
+					<th>
+                        <select id="inputPlace" name="inputPlace" required>
+                            <option value="" selected disabled hidden>Place</option>
+                            {% for placeItem in placeT %}
+                                <option value="{{ placeItem.id }}">{{ placeItem.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </th>
+                    <th>
+                        <select id="inputTown" name="inputTown" required>
+                            <option value="" selected disabled hidden>Town</option>
+                            {% for townItem in townT %}
+                                <option value="{{ townItem.id }}">{{ townItem.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </th>
+                    <th>
+                        <input placeholder="price" name="inputPrice" required></input>
+                    </th>
+                    <th>
+                        <input placeholder="image" name="inputImage" required></input>
+                    </th>
+                    <th><button type="submit">modifier</button></th>
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>

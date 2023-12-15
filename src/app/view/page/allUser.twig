@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>{{titleSite}}</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <h1>{{titlePage}}</h1>
+    <form method="post">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="lastname" placeholder="lastname">
+        <input type="text" name="age" placeholder="age">
+        <input type="text" name="email" placeholder="email">
+        <input type="text" name="phone" placeholder="phone">
+        <input type="text" name="password" placeholder="password">
+        <input type="text" name="admin" placeholder="admin">
+        <input type="submit" name="submit" value="ajouter">
+    </form>
+    <table class="tableau">
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>lastname</th>
+            <th>age</th>
+            <th>email</th>
+            <th>phone</th>
+            <th>admin</th>
+            <th>suprimé</th>
+            <th>modifier</th>
+        </tr>
+        {% for userItem in userT %}
+            <tr>
+                <td>{{userItem.id}}</td>
+                <td>{{userItem.name}}</td>
+                <td>{{userItem.lastname}} place</td>
+                <td>{{userItem.age}}</td>
+                <td>{{userItem.email}}</td>
+                <td>{{userItem.phone}}</td>
+                <td>{{userItem.admin}}</td>
+                <td><a href="/adminDeleteUser/{{ userItem.id }}">suprimé</a></td>
+                <td><a href="/adminUpdateUser/{{userItem.id}}">modifier</a></td>
+            </tr>
+        {% endfor %}
+
+</body>
+</html>

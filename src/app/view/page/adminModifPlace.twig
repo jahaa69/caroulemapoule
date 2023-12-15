@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{titleSite}}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+		<h1>
+			{{titlePage}}
+		</h1>
+		<form method="post">
+			<table class="tableau">
+				<thead>
+					<tr>
+						<th>{{onePlace.id}}</th>
+						<th>{{onePlace.name}}</th>
+						<th>modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					<th>{{onePlace.id}}</th>
+					<th>
+                        <input type="text" name="inputPlace" value="{{onePlace.name}}">
+					</th>
+					<th>
+						<button type="submit">modifier</button>
+					</th>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>

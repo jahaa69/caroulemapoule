@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{titleSite}}</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="../css/admin.css">
+	</head>
+	<body>
+		<h1>
+			{{titlePage}}
+		</h1>
+		<form method="post">
+			<table class="tableau">
+				<thead>
+					<tr>
+						<th>{{oneUser.id}}</th>
+						<th>{{oneUser.name}}</th>
+                        <th>{{oneUser.lastname}}</th>
+                        <th>{{oneUser.age}}</th>
+                        <th>{{oneUser.email}}</th>
+                        <th>{{oneUser.phone}}</th>
+                        <th>{{oneUser.password}}</th>
+                        <th>{{oneUser.admin}}</th>
+						<th>modifier</th>
+					</tr>
+				</thead>
+				<tbody>
+					<th>{{oneUser.id}}</th>
+                    <th>
+                        <input type="text" name="name" value="{{oneUser.name}}">
+                    </th>
+                    <th>
+                        <input type="text" name="lastname" value="{{oneUser.lastname}}">
+                    </th>
+                    <th>
+                        <input type="text" name="age" value="{{oneUser.age}}">
+                    </th>
+                    <th>
+                        <input type="text" name="email" value="{{oneUser.email}}">
+                    </th>
+                    <th>
+                        <input type="text" name="phone" value="{{oneUser.phone}}">
+                    </th>
+                    <th>
+                        <input type="text" name="password" value="{{oneUser.password}}">
+                    </th>
+                    <th>
+                        <input type="text" name="admin" value="{{oneUser.admin}}">
+                    </th>
+					<th>
+						<button type="submit">modifier</button>
+					</th>
+				</tbody>
+			</table>
+		</form>
+	</body>
+</html>
